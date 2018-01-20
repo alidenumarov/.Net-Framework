@@ -1,0 +1,31 @@
+Id;Parameter;Definition;ProductId
+1;Rating;10;1
+2;Comment;Best price;1
+3;Rating;8;2
+4;Comment;Top product;2
+5;Extra Info;Sale;2
+6;Rating;10;3
+7;Comment;10/10;3
+8;Rating;5;4
+9;Rating;6;5
+10;Comment;hm…;5
+11;Extra Info;Sale;5
+12;Rating;7;6
+13;Comment;Best product;6
+14;Rating;8;7
+15;Comment;Top!!!;7
+16;Extra Info;Sale;7
+17;Rating;10;8
+18;Rating;2;9
+19;Rating;6;10
+20;Comment;Best!!!;10
+21;Rating;4;11
+22;Comment;Not bad;11
+23;Extra Info;Sale;11
+24;Rating;6;12
+25;Rating;5;13
+26;Rating;5;14
+27;Comment;No good;14
+28;Extra Info;Sale;14
+29;Rating;2;15
+30;Comment;Worse price;15

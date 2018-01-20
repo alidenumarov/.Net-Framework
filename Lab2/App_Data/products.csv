@@ -1,0 +1,16 @@
+Id;Name;Price;Amount;Delivery Period (days);MarketId
+1;Cola;150;5;1;1
+2;Sprite;220;6;3;1
+3;Fanta;140;10;3;2
+4;Bread;150;4;1;2
+5;Juice;210;8;4;2
+6;Snikers;140;21;2;3
+7;Twix;320;14;1;3
+8;Nuts;410;3;5;4
+9;Water;100;5;3;4
+10;Pie;120;45;1;4
+11;Cake;150;20;4;5
+12;Chicken;100;4;4;5
+13;Apple;130;14;1;6
+14;Orange;100;22;2;6
+15;Milk;410;5;2;6
