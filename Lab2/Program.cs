@@ -87,18 +87,8 @@ namespace Lab2
             }
             
             Console.WriteLine("\n\nШаг 2. Обработка Market");
-            Console.WriteLine("\n1. Отобразить список продуктов;");
+            Console.WriteLine("\n1. Отобразить список продуктов;\n");
 
-            var listOfProducts = productList
-                .Select(x => new {x.Id, x.Name})
-                .ToList();
-
-            foreach(var item in listOfProducts) {
-                Console.WriteLine(item.Id + ". " + item.Name);
-            }
-
-            Console.WriteLine("\n2. Вывести сумму цен всех продуктов выбранного Market; ");
-            
             foreach(var i in marketList) {
                 Console.Write(i.MarketName + " | ");
             }
@@ -111,6 +101,12 @@ namespace Lab2
             selectedMarket.Products = productList
                 .Where(x => x.MarketId == selectedMarket.Id)
                 .ToList();
+
+            foreach(var item in selectedMarket.Products) {
+                Console.WriteLine(item.Id + " " + item.Name);
+            }
+
+            Console.WriteLine("\n2. Вывести сумму цен всех продуктов выбранного Market; ");
             
             Console.WriteLine("= " + selectedMarket.Products.Sum(x => x.Price));
 
@@ -246,7 +242,6 @@ namespace Lab2
                         g.Parameter,
                         g.Definition));
                 }
-                Console.WriteLine("\n");
             }
 
             var grMarRatAndProdRat = grMarProd
@@ -261,31 +256,67 @@ namespace Lab2
                         y.Definition})
                     .Where(x => x.Parameter.Equals("Rating"));
 
-            double avProductRating = grMarRatAndProdRat.Sum(x => Convert.ToDouble(x.Definition)) / grMarRatAndProdRat.Count();
 
-            Console.WriteLine("Среднее занчение рейтингов продуктов: " + avProductRating + "\n");
-
-            string note = "";
             foreach(var grMPP in grMarProdPrInf) {
-                foreach(var g in grMPP) {
-                    if(g.Parameter.Equals("Rating") && Convert.ToDouble(g.Definition) < avProductRating) {
-                        note = "              IS LESS";
-                    } else {
-                        note = "";
-                    }
-                    Console.Write(string.Format("{0} |  {1} |  {2}  |  {3}",
-                        g.MarketName,
-                        g.Rating,
-                        g.Name,
-                        // g.Price,
-                        // g.Amount,
-                        // g.DeliveryPeriod,
-                        // g.Parameter,
-                        g.Definition));
-                        Console.WriteLine(note);
-                }
+                var avPrInMarket = grMPP
+                    .Where(x => x.Parameter.Equals("Rating"))
+                    .Select(x => Convert.ToInt32(x.Definition))
+                    .ToList();
+                
+                // double avProductRat = avPrInMarket
+                //     .Where(x => x.Parameter.Equals("Rating")
+                //     .Average(x => Convert.ToDouble(x.Definition));
+                
+                // foreach(var g in grMPP) {
+                //     Console.WriteLine(string.Format(grMarProdPrInfStr,
+                //         g.MarketName,
+                //         g.Rating,
+                //         g.Name,
+                //         g.Price,
+                //         g.Amount,
+                //         g.DeliveryPeriod,
+                //         g.Parameter,
+                //         g.Definition));
+                        
+                //     Console.WriteLine(avProductRat + "");
+                // }
+                // Console.WriteLine("\n");
             }
 
+            // for(int i = 0; i < grMarRatAndProdRat.Count(); i++) {
+                
+            // }
+
+            //double avProductRating = grMarRatAndProdRat.Average(x => Convert.ToDouble(x.Definition));
+
+            Console.WriteLine("\n2. Сравнить рейтинг Market с средним значением рейтингов продуктов. Если рейтинг Market ниже, то выделить Market\n");
+            foreach(var grMPP in grMarProdPrInf) {
+                var avPrInMarket = grMPP
+                    .Where(x => x.Parameter.Equals("Rating"))
+                    .Select(x => Convert.ToInt32(x.Definition))
+                    .Average();
+
+                Console.WriteLine("\nAverage rating of product: " + avPrInMarket + "\n");
+                string addedTick = "";
+                foreach(var g in grMPP) {
+                    if(Convert.ToDouble( g.Rating) < Convert.ToDouble(avPrInMarket)) {
+                        addedTick = "      IS LESS";
+                    } else {
+                        addedTick = "";
+                    }
+                }
+                foreach(var g in grMPP) {
+                    Console.WriteLine(string.Format(grMarProdPrInfStr,
+                        g.MarketName,
+                        g.Rating + addedTick,
+                        g.Name,
+                        g.Price,
+                        g.Amount,
+                        g.DeliveryPeriod,
+                        g.Parameter,
+                        g.Definition));
+                }
+            }
         }
     }
 }
