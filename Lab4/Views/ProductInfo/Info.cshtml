@@ -1,0 +1,33 @@
+@using System.Linq
+@using Lab4.Models
+@model List<ProductAndInfo>
+@{
+    ViewData["Title"] = "List of ProductInfo";
+}
+<h1>List of ProductInfo</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Amount</th>
+            <th>Delivery Period</th>            
+            <th>Parameter</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>            
+                <td>@item.Price</td>
+                <td>@item.Amount</td>
+                <td>@item.DeliveryPeriod</td>
+                <td>@item.Parameter</td>
+                <td>@item.Definition</td>
+            </tr>
+        }
+    </tbody>
+</table>

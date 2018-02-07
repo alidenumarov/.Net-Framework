@@ -1,0 +1,84 @@
+@using Lab4.Controllers
+@model MyVM
+
+<!-- <h3>@ViewData["MarketName"]</h3>  -->
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Amount</th>
+            <th>Delivery Period</th>?
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach(var item in Model.Selected)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Price</td>
+                <td>@item.Amount</td>
+                <td>@item.DeliveryPeriod</td>
+            </tr>
+        }
+    </tbody>
+
+</table>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Amount</th>
+            <th>Delivery Period</th>?
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach(var item in Model.SortByPrice)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Price</td>
+                <td>@item.Amount</td>
+                <td>@item.DeliveryPeriod</td>
+            </tr>
+        }
+    </tbody>
+
+</table>
+
+Price : @Model.sum
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Amount</th>
+            <th>Delivery Period</th>?
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach(var item in Model.SortByAmount)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Price</td>
+                <td>@item.Amount</td>
+                <td>@item.DeliveryPeriod</td>
+            </tr>
+        }
+    </tbody>
+
+</table>

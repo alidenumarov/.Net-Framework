@@ -1,0 +1,27 @@
+@using System.Linq
+@{
+    ViewData["Title"] = "List of ProductInfo";
+}
+<h1>List of ProductInfo</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Parameter</th>
+            <th>Definition</th>
+            <th>ProductId</th>            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Parameter</td>
+                <td>@item.Definition</td>
+                <td>@item.ProductId</td>
+            </tr>
+        }
+    </tbody>
+</table>
