@@ -6,7 +6,7 @@ using Lab2.Models;
 
 namespace Lab2
 {
-    class Program
+    public class Programmmm
     {
         static readonly string marketPath = "App_Data/markets.csv";
         static readonly string productsPath = "App_Data/products.csv";
@@ -255,7 +255,6 @@ namespace Lab2
                         y.Parameter,
                         y.Definition})
                     .Where(x => x.Parameter.Equals("Rating"));
-
 
             foreach(var grMPP in grMarProdPrInf) {
                 var avPrInMarket = grMPP

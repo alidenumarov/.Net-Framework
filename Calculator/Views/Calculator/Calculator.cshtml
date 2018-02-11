@@ -1,0 +1,49 @@
+@model Calculator.Models.CalculatorVals
+@{
+    ViewData["Title"] = "Calculator";
+}
+
+@using (Html.BeginForm("Calculator", "Calculator", FormMethod.Post))
+{
+    <form>
+    <!-- <legend>Simple calulator</legend>  
+    <input type="text" id="firstValue" placeholder="Value 1" />
+    
+    <input type="text" id="secondValue" placeholder="Value 2" />
+    <button type="submit" value="=">=</button>
+    <h3>Answer: answer</h3> -->
+    <div>
+        <fieldset>  
+        <legend>Simple Calculator</legend>  
+   
+        <div class="editor-label">  
+            @Html.LabelFor(model => model.FirstValue)  
+        </div>  
+        <div class="editor-field">  
+            @Html.EditorFor(model => model.FirstValue)            
+        </div>
+            <select id="Operator" name="Operator">
+                <option value="1">+</option>
+                <option value="2">-</option>
+                <option value="3">*</option>
+                <option value="4">/</option>
+            </select>
+        <div class="editor-label">  
+            @Html.LabelFor(model => model.SecondValue)  
+        </div>  
+        <div class="editor-field">  
+            @Html.EditorFor(model => model.SecondValue)            
+        </div>
+
+        <div>
+
+        </div>
+
+        <p>  
+            <input type="submit" value="Calculate" />  
+        </p>
+    </fieldset> 
+    </div>
+    Operator: @Model.Answer
+</form>?
+}

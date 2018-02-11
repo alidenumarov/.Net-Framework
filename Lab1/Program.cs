@@ -134,7 +134,7 @@ namespace Lab1
             int senkAndMam = 0;
             var senkAndMamCourses = teachers.ElementAt(0).Courses.Intersect(teachers.ElementAt(4).Courses);
             foreach(var i in senkAndMamCourses) senkAndMam++;
-            Console.WriteLine("Amount of courses(s), that Senkebayeva A. and Mamyrova G. have: " + senkAndMam);
+            Console.WriteLine("Amount of same courses(s), that Senkebayeva A. and Mamyrova G. have: " + senkAndMam);
             
             Console.WriteLine("\nNumber of students, which are  >=21, in Crystall organization: " + numOf21StudInCrys);
             Console.WriteLine("Amount of students in each organization: ");
