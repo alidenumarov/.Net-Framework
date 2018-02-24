@@ -1,0 +1,10 @@
+D:\university\dotnet\Calc\bin\Debug\netcoreapp2.0\Calc.deps.json
+D:\university\dotnet\Calc\bin\Debug\netcoreapp2.0\Calc.runtimeconfig.json
+D:\university\dotnet\Calc\bin\Debug\netcoreapp2.0\Calc.runtimeconfig.dev.json
+D:\university\dotnet\Calc\bin\Debug\netcoreapp2.0\Calc.dll
+D:\university\dotnet\Calc\bin\Debug\netcoreapp2.0\Calc.pdb
+D:\university\dotnet\Calc\obj\Debug\netcoreapp2.0\Calc.csproj.CoreCompileInputs.cache
+D:\university\dotnet\Calc\obj\Debug\netcoreapp2.0\Calc.AssemblyInfoInputs.cache
+D:\university\dotnet\Calc\obj\Debug\netcoreapp2.0\Calc.AssemblyInfo.cs
+D:\university\dotnet\Calc\obj\Debug\netcoreapp2.0\Calc.dll
+D:\university\dotnet\Calc\obj\Debug\netcoreapp2.0\Calc.pdb

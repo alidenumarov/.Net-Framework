@@ -10,17 +10,41 @@ namespace Calculator.Controllers
 {
     public class CalculatorController : Controller
     {
-        [HttpPost]
-        public IActionResult Calculator(CalculatorVals calculatorVals)
+        [HttpGet]
+        public IActionResult Index()
         {
-            calculatorVals = new CalculatorVals();
-            var ans = Convert.ToInt32(calculatorVals.FirstValue) + Convert.ToInt32(calculatorVals.SecondValue);
-            // calculatorVals.Operators = "555";
-            calculatorVals.Answer = ans.ToString();
-            // calculatorVals.SecondValue = "asd";
-            // calculatorVals.Answer = "OOOKK";
-            
-            return View(calculatorVals);
+            var vals = new CalculatorVals()
+            {
+                FirstValue = 0,
+                SecondValue = 0,
+                Answer = 0,
+                Operator = "+"
+            };
+            return View(vals);
+        }
+
+        [HttpPost]
+        public IActionResult Index(CalculatorVals vals)
+        {
+            switch(vals.Operator)
+            {
+                case "+": 
+                    vals.Answer = vals.FirstValue + vals.SecondValue;
+                    break;
+                case "-":
+                    vals.Answer = vals.FirstValue - vals.SecondValue;
+                    break;
+                case "*":
+                    vals.Answer = vals.FirstValue * vals.SecondValue;
+                    break;
+                case "/":
+                    vals.Answer = vals.FirstValue / vals.SecondValue;
+                    break;
+                default :
+                    vals.Answer = 0;
+                    break;    
+            }
+            return View(vals);
         }
     }
 }
