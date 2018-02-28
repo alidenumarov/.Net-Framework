@@ -6,28 +6,28 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.0": {
-      "Lab3/1.0.0": {
+      "lab3/1.0.0": {
         "dependencies": {
-          "RestrMenu": "1.0.0"
+          "library": "1.0.0"
         },
         "runtime": {
-          "Lab3.dll": {}
+          "lab3.dll": {}
         }
       },
-      "RestrMenu/1.0.0": {
+      "library/1.0.0": {
         "runtime": {
-          "RestrMenu.dll": {}
+          "library.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "Lab3/1.0.0": {
+    "lab3/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "RestrMenu/1.0.0": {
+    "library/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

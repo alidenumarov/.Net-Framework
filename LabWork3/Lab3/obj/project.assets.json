@@ -197,17 +197,14 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-      "RestrMenu/1.0.0": {
+      "library/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v2.0",
-        "dependencies": {
-          "Microsoft.NETCore.App": "2.0.0"
-        },
+        "framework": ".NETStandard,Version=v2.0",
         "compile": {
-          "bin/placeholder/RestrMenu.dll": {}
+          "bin/placeholder/library.dll": {}
         },
         "runtime": {
-          "bin/placeholder/RestrMenu.dll": {}
+          "bin/placeholder/library.dll": {}
         }
       }
     }
@@ -670,16 +667,16 @@
         "netstandard.library.nuspec"
       ]
     },
-    "RestrMenu/1.0.0": {
+    "library/1.0.0": {
       "type": "project",
-      "path": "../RestrMenu/RestrMenu.csproj",
-      "msbuildProject": "../RestrMenu/RestrMenu.csproj"
+      "path": "../library/library.csproj",
+      "msbuildProject": "../library/library.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
       "Microsoft.NETCore.App >= 2.0.0",
-      "RestrMenu >= 1.0.0"
+      "library >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -689,11 +686,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Aliden\\Labs_.net\\LabWork3\\Lab3\\Lab3.csproj",
-      "projectName": "Lab3",
-      "projectPath": "C:\\Users\\Aliden\\Labs_.net\\LabWork3\\Lab3\\Lab3.csproj",
+      "projectUniqueName": "C:\\Users\\Aliden\\Labs_.net\\LabWork3\\lab3\\lab3.csproj",
+      "projectName": "lab3",
+      "projectPath": "C:\\Users\\Aliden\\Labs_.net\\LabWork3\\lab3\\lab3.csproj",
       "packagesPath": "C:\\Users\\Aliden\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Aliden\\Labs_.net\\LabWork3\\Lab3\\obj\\",
+      "outputPath": "C:\\Users\\Aliden\\Labs_.net\\LabWork3\\lab3\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -710,8 +707,8 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "C:\\Users\\Aliden\\Labs_.net\\LabWork3\\RestrMenu\\RestrMenu.csproj": {
-              "projectPath": "C:\\Users\\Aliden\\Labs_.net\\LabWork3\\RestrMenu\\RestrMenu.csproj"
+            "C:\\Users\\Aliden\\Labs_.net\\LabWork3\\library\\library.csproj": {
+              "projectPath": "C:\\Users\\Aliden\\Labs_.net\\LabWork3\\library\\library.csproj"
             }
           }
         }
