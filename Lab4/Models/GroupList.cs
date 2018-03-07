@@ -55,8 +55,12 @@ namespace Lab4.Models {
                 .Where(x => x.Parameter.Equals("Rating"))
                 .Select(x => Convert.ToInt32(x.Definition))
                 .Average();
+
+            // var _avRatingPrInMarket = MarketProductAndInfos()
+            //     .Where(x => x.Parameter.Equals("Rating") && Convert.ToDouble(x.Rating) < _av)
+            //     .ToList();
             var _avRatingPrInMarket = MarketProductAndInfos()
-                .Where(x => x.Parameter.Equals("Rating") && Convert.ToDouble(x.Rating) < _av)
+                .Where(x => x.Parameter.Equals("Rating"))
                 .ToList();
             return _avRatingPrInMarket;
         }
